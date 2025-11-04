@@ -17,6 +17,8 @@ import GoalsPage from '@pages/GoalsPage'
 import NewsPage from '@pages/NewsPage'
 import OwnershipPage from '@pages/OwnershipPage'
 import ProfilePage from '@pages/ProfilePage'
+import AccountDetailPage from '@pages/AccountDetailPage'
+import GoalDetailPage from '@pages/GoalDetailPage'
 
 function App() {
   useEffect(() => {
@@ -54,10 +56,26 @@ function App() {
               }
             />
             <Route
+              path="/accounts/:id"
+              element={
+                <ProtectedRoute>
+                  <AccountDetailPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
               path="/goals"
               element={
                 <ProtectedRoute>
                   <GoalsPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/goals/:id"
+              element={
+                <ProtectedRoute>
+                  <GoalDetailPage />
                 </ProtectedRoute>
               }
             />

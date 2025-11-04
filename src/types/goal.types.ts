@@ -9,6 +9,7 @@ export interface GoalFormData {
   target_amount: number
   frequency: GoalFrequency
   due_date?: string
+  regular_amount?: number
   linked_account_id?: string
 }
 
@@ -25,6 +26,7 @@ export interface GoalUpdateData {
   saved_amount?: number
   frequency?: GoalFrequency
   due_date?: string
+  regular_amount?: number
   linked_account_id?: string
 }
 

@@ -30,6 +30,7 @@ export const goalSchema = z.object({
   target_amount: z.number().positive('Target amount must be positive').min(0.01),
   frequency: z.enum(['daily', 'weekly', 'monthly', 'one-time']),
   due_date: z.string().optional(),
+  regular_amount: z.number().positive('Regular amount must be positive').min(0.01).optional(),
   linked_account_id: z.string().optional(),
 })
 

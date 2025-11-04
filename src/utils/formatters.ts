@@ -7,7 +7,7 @@ export const formatCurrency = (amount: number, currency: string = 'GBP'): string
   }).format(amount)
 }
 
-export const formatDate = (date: string | Date, formatStr: string = 'dd MMM yyyy'): string => {
+export const formatDate = (date: string | Date, formatStr: string = 'yyyy-MM-dd'): string => {
   try {
     const dateObj = typeof date === 'string' ? new Date(date) : date
     return format(dateObj, formatStr)

@@ -28,9 +28,21 @@ export function Header() {
           <div className="flex items-center">
             <button
               onClick={() => navigate('/')}
-              className="text-xl font-bold text-primary-600 hover:text-primary-700 transition-colors"
+              className="flex items-center gap-2 group"
+              aria-label="Home"
             >
-              Outbehaving
+              <img
+                src="/logos/ob-logo.svg"
+                alt="Outbehaving logo"
+                className="h-8 w-auto object-contain"
+                onError={(e) => {
+                  const img = e.currentTarget as HTMLImageElement
+                  img.src = '/logos/ob-logo.png'
+                }}
+              />
+              <span className="text-lg font-semibold text-gray-900 group-hover:text-primary-700 transition-colors">
+                Outbehaving
+              </span>
             </button>
           </div>
 

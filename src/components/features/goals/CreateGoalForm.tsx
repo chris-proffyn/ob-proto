@@ -56,6 +56,15 @@ export function CreateGoalForm({
         {...register('target_amount', { valueAsNumber: true })}
       />
 
+      <Input
+        label="Regular Amount (Optional)"
+        type="number"
+        step="0.01"
+        placeholder="0.00"
+        error={(errors as any).regular_amount?.message}
+        {...register('regular_amount', { valueAsNumber: true })}
+      />
+
       <div>
         <label className="block text-sm font-medium text-gray-700 mb-1">
           Frequency

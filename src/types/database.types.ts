@@ -15,6 +15,10 @@ export interface Account {
   bank_name: string
   balance: number
   credit_score?: number
+  account_number?: string
+  sort_code?: string
+  iban?: string
+  account_type?: string
   created_at?: string
   updated_at?: string
 }
@@ -28,6 +32,7 @@ export interface Goal {
   saved_amount: number
   frequency?: 'daily' | 'weekly' | 'monthly' | 'one-time'
   due_date?: string
+  regular_amount?: number
   linked_account_id?: string
   created_at?: string
   updated_at?: string
